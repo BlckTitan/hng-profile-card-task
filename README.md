@@ -1,4 +1,6 @@
-:drawing_pin: Part 2: Your Profile Card
+Part 2: Your Profile Card
+
+
 Task Requirements
 - Create a responsive Profile Card using HTML, CSS, and Vanilla JavaScript.
 - The Profile Card must include:
