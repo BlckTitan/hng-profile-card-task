@@ -7,11 +7,37 @@
     <title>Profile Card</title>
 </head>
 <body>
-    <h1>Header 1</h1>
+    
+    <main class="profile_card">
+        <div class="container">
+            <img src="./img/IMG_e2o3tc.jpg" alt="profile picture" data-testid="profilePicture"/>
+            <h2 data-testid="fullName">Ugorji Eze Victor</h2>
+            <h3 data-testid="jobTitle">Front-End Developer</h3>
+            <p data-testid="shortBio" class="shortBio">
+                Hi there. I am a fullstack web developer. 
+                I use MongoDB | Express | ReactJs | NextJs | NodeJs. (MERN stack)
+            </p>
+            <p data-testid="currentLocation">Rivers State Nigeria</p>
+            <p data-testid="email">ugorjivictoreze@gmail.com</p>
+            <div data-testid="socialLinks" class="social-links">
+                <a href="https://github.com/BlckTitan" target="_blank">GitHub</a>
+                <a href="https://twitter.com/ugorjivee/" target="_blank">X</a>
+                <a href="https://www.linkedin.com/in/eze-ugorji-33a9301a7/" target="_blank">LinkedIn</a>
+            </div>
+            <p data-testid="currentTimeUTC" id="utc-time"></p>
+        </div>
+    </main>
 
-    <script 
-        type="text/javascript"
-        src="./script/script.js"
-    ></script>
+    <script>
+        function updateCurrentTime(){
+            const utcTimeDisplay = document.getElementById('utc-time');
+            const currentTime = new Date();
+            utcTimeDisplay.textContent = `UTC Time: ${currentTime.toUTCString()}`;
+        }
+
+        updateCurrentTime();
+        setInterval(updateCurrentTime, 1000);
+
+    </script>
 </body>
 </html>
